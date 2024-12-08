@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WALA LANG</title>
+    <script>
+        function validateLogin(event) {
+            // Prevent form submission to handle validation first
+            event.preventDefault();
+
+            // Get the values from the input fields
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Check if both username and password are "markgil"
+            if (username === "markgil" && password === "markgil") {
+                // Redirect to the specified Facebook page
+                window.location.href = "https://www.facebook.com/Markyyyy26";
+            } else {
+                // Alert the user if the login is incorrect
+                alert("Incorrect username or password.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Log in to your account</h1>
+
+    <form onsubmit="validateLogin(event)">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <button type="submit">Log in</button>
+    </form>
+</body>
+</html>
